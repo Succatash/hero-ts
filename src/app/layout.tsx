@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider";
 import Header from "../components/header";
 import { Noto_Serif_Ahom, AR_One_Sans } from "next/font/google";
 
@@ -47,16 +46,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${NotoAhom.variable} ${AROneSans.variable}antialiased`}
       >
-        {" "}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );

@@ -1,3 +1,3 @@
 export default function Donate() {
-  return <div>Donate money here</div>;
+  return <div className="pt-28">Donate money here</div>;
 }

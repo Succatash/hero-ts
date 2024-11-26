@@ -3,7 +3,6 @@
 import { Button } from "./ui/button";
 import React from "react";
 import { useRouter } from "next/navigation";
-
 import Link from "next/link";
 import Logo from "./logo";
 import AnimatedSearch from "./animatedsearch";
@@ -20,7 +19,7 @@ const Header = () => {
 
       <div className="flex flex-col">
         {/* top part of header */}
-        <div className="flex h-[60px] w-screen flex-row justify-evenly bg-blue-700">
+        <div className="flex h-[60px] w-screen flex-row justify-evenly bg-blue-900">
           <div className="font-sansSerif content-center pl-[135px] text-3xl text-white">
             Heros of Israel
           </div>
@@ -39,32 +38,32 @@ const Header = () => {
         </div>
         <div className="flex h-[30px] w-screen items-center justify-evenly bg-blue-400 pl-[105px] text-white">
           <Link
-            href="/armedConflict"
-            className="hover: hover:bg-white hover:text-blue-900"
+            href="/soldiers"
+            className="p-1 text-sm hover:bg-white hover:text-blue-900"
           >
-            ARMED CONFLICT
+            SOLDIERS
           </Link>
           <Link
-            href="/science"
-            className="hover: hover:bg-white hover:text-blue-900"
+            href="/research"
+            className="p-1 text-sm hover:bg-white hover:text-blue-900"
           >
-            SCIENTISTS
+            RESEARCHERS
           </Link>
           <Link
             href="/politics"
-            className="hover: hover:bg-white hover:text-blue-900"
+            className="p-1 text-sm hover:bg-white hover:text-blue-900"
           >
             POLITICIANS
           </Link>
           <Link
-            href="/science"
-            className="hover: hover:bg-white hover:text-blue-900"
+            href="/business"
+            className="p-1 text-sm hover:bg-white hover:text-blue-900"
           >
             BUSINESS
           </Link>
           <Link
-            href="/politics"
-            className="hover: hover:bg-white hover:text-blue-900"
+            href="/others"
+            className="p-1 text-sm hover:bg-white hover:text-blue-900"
           >
             OTHERS
           </Link>

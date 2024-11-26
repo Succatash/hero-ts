@@ -9,7 +9,7 @@ import {
 const MenuIcon = ({ isOpen }: { isOpen: boolean }) => (
   <div className="relative flex h-5 w-6 flex-col justify-between">
     <span
-      className={`block h-[3px] w-full origin-top-left bg-white transition-all duration-300 ease-in-out ${isOpen ? "translate-x-[2px] rotate-45" : ""} `}
+      className={`block h-[3px] w-full origin-top-left bg-white transition-all duration-300 ease-in-out ${isOpen ? "translate-x-0 rotate-45" : ""} `}
     />
 
     <span
@@ -17,7 +17,7 @@ const MenuIcon = ({ isOpen }: { isOpen: boolean }) => (
     />
 
     <span
-      className={`block h-[3px] w-full origin-bottom-left bg-white transition-all duration-300 ease-in-out ${isOpen ? "translate-x-[2px] -rotate-45" : ""} `}
+      className={`block h-[3px] w-full origin-bottom-left bg-white transition-all duration-300 ease-in-out ${isOpen ? "translate-x-0 -rotate-45" : ""} `}
     />
   </div>
 );
