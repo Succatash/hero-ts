@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 
-import { AlertCircle, CheckCircle2, Info, X } from "lucide-react";
+import { CheckCircle2, Info, X } from "lucide-react";
 
 // Define an interface for the card configuration
 interface CardConfig {
@@ -52,9 +52,6 @@ const DynamicCard: React.FC<DynamicCardProps> = ({ type, configs }) => {
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle>{config.title}</CardTitle>
-          {config.badgeVariant && (
-            <Badge variant={config.badgeVariant}>{type}</Badge>
-          )}
         </div>
         <CardDescription>{config.description}</CardDescription>
       </CardHeader>
@@ -81,7 +78,7 @@ export const CardExample = () => {
       title: "Operation Successful",
       description: "Your action was completed",
       content: <p>The task has been completed successfully.</p>,
-      badgeVariant: "success",
+
       icon: <CheckCircle2 className="text-green-500" />,
       footer: "Processed on: November 26, 2024",
     },
@@ -89,7 +86,7 @@ export const CardExample = () => {
       title: "Operation Failed",
       description: "Something went wrong",
       content: <p>Unable to complete the requested action.</p>,
-      badgeVariant: "destructive",
+
       icon: <X className="text-red-500" />,
       footer: "Error logged at: 14:30",
     },
@@ -105,7 +102,7 @@ export const CardExample = () => {
           </ul>
         </div>
       ),
-      badgeVariant: "outline",
+
       icon: <Info className="text-blue-500" />,
       footer: "Last updated: Today",
     },
