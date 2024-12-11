@@ -44,10 +44,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${NotoAhom.variable} ${AROneSans.variable}antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${NotoAhom.variable} ${AROneSans.variable}antialiased flex flex-col`}
       >
-        <Header />
-        {children}
+        <Header className="" />
+        <main className="h-[5000px]">{children}</main>
+        <footer className="bg-black text-white">Footer</footer>
       </body>
     </html>
   );

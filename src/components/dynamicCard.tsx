@@ -19,6 +19,7 @@ interface CardConfig {
   type?: "default" | "secondary" | "destructive" | "outline" | "success";
   icon?: React.ReactNode;
   className?: string;
+  yarzehit?: Date;
 }
 
 // Define a type for the card configurations

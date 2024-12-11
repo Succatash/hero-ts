@@ -6,6 +6,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import Link from "next/link";
+
 const MenuIcon = ({ isOpen }: { isOpen: boolean }) => (
   <div className="relative flex h-5 w-6 flex-col justify-between">
     <span
@@ -34,9 +36,15 @@ const AnimatedDropdown = () => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-48" sideOffset={43} sticky="always">
-        <DropdownMenuItem>Programs</DropdownMenuItem>
-        <DropdownMenuItem>Our Mission</DropdownMenuItem>
-        <DropdownMenuItem>About Us</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/mission">Our Mission</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="programs">Programs</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/about">About Us</Link>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
