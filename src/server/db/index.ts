@@ -8,5 +8,5 @@ const sql = neon(process.env.DATABASE_URL!);
 
 export const db = drizzle({ client: sql, logger: true });
 
-const result = await db.execute("select 1");
-console.log(result);
+// const result = await db.execute("select 1");
+// console.log(result);

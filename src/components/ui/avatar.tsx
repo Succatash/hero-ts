@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const Avatar = React.forwardRef<

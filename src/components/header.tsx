@@ -13,7 +13,7 @@ const Header = ({ className }: HTMLAttributes<HTMLHeadingElement>) => {
   const router = useRouter();
 
   const pathname = usePathname();
-  let isAdmin = pathname.includes("admin");
+  const isAdmin = pathname.includes("admin");
 
   return (
     <div className={`${isAdmin ? "hidden" : ""}`}>

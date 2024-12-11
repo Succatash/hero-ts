@@ -1,4 +1,4 @@
-import { Calendar, ClipboardPlus, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, ClipboardPlus, Inbox, Search } from "lucide-react";
 
 import {
   Sidebar,
