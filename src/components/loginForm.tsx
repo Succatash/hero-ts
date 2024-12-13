@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -10,9 +11,15 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { JSX, ReactElement } from "react";
 
-const LoginForm = ({ auth }: { auth: boolean }): ReactElement => {
+interface AuthProps {
+  auth: boolean;
+  setAuth: (loggedIn: boolean) => void;
+}
+
+const LoginForm = ({ auth, setAuth }: AuthProps) => {
+  //if authenticated make sure u useRouter to where it needs to go on a handleClick
+
   return (
     <>
       <Card className="mx-auto max-w-sm">
@@ -45,11 +52,15 @@ const LoginForm = ({ auth }: { auth: boolean }): ReactElement => {
               </div>
               <Input id="password" type="password" required />
             </div>
-            <Link href={"/admin/dash"}>
-              <Button type="submit" className="w-full">
-                Login
-              </Button>
-            </Link>
+
+            <Button
+              type="submit"
+              className="w-full"
+              onClick={() => setAuth(!auth)}
+            >
+              Login
+            </Button>
+
             <Button variant="outline" className="w-full">
               Login with Google
             </Button>
