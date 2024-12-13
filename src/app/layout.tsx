@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import { Noto_Serif_Ahom, AR_One_Sans } from "next/font/google";
 
 const geistSans = localFont({
@@ -46,9 +47,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${NotoAhom.variable} ${AROneSans.variable}antialiased flex flex-col`}
       >
-        <Header className="" />
-        <main className="h-[5000px]">{children}</main>
-        <footer className="bg-black text-white">Footer</footer>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

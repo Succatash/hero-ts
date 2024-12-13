@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   DropdownMenu,
@@ -44,6 +45,12 @@ const AnimatedDropdown = () => {
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Link href="/about">About Us</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/store">Store</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/login">Login</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -9,7 +9,7 @@ const Soldiers = () => {
     { img: "https://github.com/shadcn.png", num: 1, name: "tzvi" },
   ];
   return (
-    <div className="pt-28">
+    <div className="">
       {data.map(({ img, num, name }) => (
         <Link href={`soldiers/${name}`} key={1 + num}>
           <SmallCard image={img} name={name} />

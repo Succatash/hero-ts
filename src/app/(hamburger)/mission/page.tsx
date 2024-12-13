@@ -1,6 +1,6 @@
 const Mission = () => {
   return (
-    <blockquote className="pt-28">
+    <blockquote className="">
       Our mission statement is to educate the world on those whove become
       Israels greateset heros, from soldiers who make the ultimate sacrifice, to
       netziens history of the Heros of Israel and how they themselves can become

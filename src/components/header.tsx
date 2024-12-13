@@ -1,13 +1,12 @@
 "use client";
-import { Button } from "./ui/button";
 import React, { HTMLAttributes } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "./logo";
-import AnimatedSearch from "./animatedsearch";
-import AnimatedDropdown from "./animateddropdown";
+import { Button } from "./ui/button";
+import AnimatedSearch from "./search-animation";
+import AnimatedDropdown from "./hamburger-animation";
 import { cn } from "../lib/utils";
-import { usePathname } from "next/navigation";
 
 const Header = ({ className }: HTMLAttributes<HTMLHeadingElement>) => {
   const router = useRouter();
@@ -16,11 +15,9 @@ const Header = ({ className }: HTMLAttributes<HTMLHeadingElement>) => {
   const isAdmin = pathname.includes("admin");
 
   return (
-    <div className={`${isAdmin ? "hidden" : ""}`}>
+    <div className={`${isAdmin ? "hidden" : "sticky left-0 top-0 shadow-md"}`}>
       <div className="w-full bg-blue-500 text-center">Advertisement banner</div>
-      <header
-        className={cn(`max-h-26 sticky left-0 top-0 flex w-screen`, className)}
-      >
+      <header className={cn(`max-h-26 flex w-screen`, className)}>
         <Logo
           name="HoI"
           className={`fixed top-0 z-10 ml-3 flex h-28 w-24 items-center justify-center bg-blue-800 text-center font-serif text-4xl text-white`}
@@ -47,16 +44,16 @@ const Header = ({ className }: HTMLAttributes<HTMLHeadingElement>) => {
           </div>
           <div className="flex h-[30px] w-screen items-center justify-evenly bg-blue-400 pl-[105px] text-white">
             <Link
-              href="/soldiers"
+              href="/research"
               className="p-1 text-sm hover:bg-white hover:text-blue-900"
             >
-              SOLDIERS
+              RESEARCHERS
             </Link>
             <Link
               href="/research"
               className="p-1 text-sm hover:bg-white hover:text-blue-900"
             >
-              RESEARCHERS
+              History
             </Link>
             <Link
               href="/politics"
@@ -71,10 +68,16 @@ const Header = ({ className }: HTMLAttributes<HTMLHeadingElement>) => {
               BUSINESS
             </Link>
             <Link
-              href="/others"
+              href="/research"
               className="p-1 text-sm hover:bg-white hover:text-blue-900"
             >
-              OTHERS
+              Blog
+            </Link>
+            <Link
+              href="/news"
+              className="p-1 text-sm hover:bg-white hover:text-blue-900"
+            >
+              News
             </Link>
           </div>
         </div>
